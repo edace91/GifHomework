@@ -1,0 +1,33 @@
+body {
+
+	padding: 50px;
+	display: inline;
+	float: left;
+}
+
+button, div, form, input {
+			margin: 10px;
+}
+ 
+p {
+	width:100px;
+	margin-right:10px;
+}
+
+#addQueen, .queen {
+
+	background-color: pink;
+	color: purple;
+	border: 10px red;
+}
+#queenGifs {
+
+	display: flex-inline;
+
+}
+.item{
+
+	width: 360px;
+	display: flex-inline;
+	
+}
