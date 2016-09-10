@@ -1,5 +1,6 @@
 // Initial array of Queens
-var topics = ['Kim Chi', 'Raja', 'Bianca del Rio', 'Latrice Royale'];
+var topics = ['Kim Chi', 'Raja','Alyssa Edwards','Bianca del Rio', 'Latrice Royale', 'Jujubee','Shangela','Pandora Boxx','Jiggly Caliente','Willam','Alaska','Laganja Estranja','Courtney Act','Adore Delano','Trixie Mattel','BenDeLaCreme'];
+
 
 function renderButtons(){
 
@@ -40,6 +41,7 @@ $('#addQueen').on('click', function(){
 //non-animated gif images from the GIPHY API and place them on the page
 
 $('#queenButtons').on('click','.queen', function(){
+
     var q = $(this).data('person'); 
     console.log(q);
 
@@ -51,6 +53,8 @@ $('#queenButtons').on('click','.queen', function(){
 
         console.log(response)
         var results = response.data;
+
+
 
         for (var i=0; i < results.length; i++) {
 
@@ -66,22 +70,34 @@ $('#queenButtons').on('click','.queen', function(){
                 var p = $('<p>').text( "Rating: " + rating);
 
                 var queenImage = $('<img>');
-                queenImage.attr('src', results[i].images.fixed_height.url);
+                queenImage.attr('src', results[i].images.fixed_height_still.url);
 
                 gifDiv.append(p)
                 gifDiv.append(queenImage)
 
-                $('#queenGifs').prepend(gifDiv);
+                $('#queenGifs').prepend(gifDiv);   
             }
-         }
+        }
+        
     });
 }); 
 
 //When the user clicks one of the still GIPHY images, the gif should animate. 
 //If the user clicks the gif again, it should stop playing.
-$('#queenGifs').on('click', function(){
-	$(queenImage).html('src', results[i].images.fixed_height.url);
+$('.item').on('click','<img>', function(){
+
+	var state = $(this).attr('data-state');
+
+    if ( state == 'still'){
+                $(this).attr('src', $(this).data('animate'));
+                $(this).attr('data-state', 'animate');
+            }else{
+                $(this).attr('src', $(this).data('still'));
+                $(this).attr('data-state', 'still');
+            } 
 });	
+
+
 
 
 $(document).on('click', '.queen');

@@ -1,8 +1,7 @@
 body {
-
-	padding: 50px;
-	display: inline;
-	float: left;
+	
+ color: purple;
+	
 }
 
 button, div, form, input {
@@ -19,15 +18,50 @@ p {
 	background-color: pink;
 	color: purple;
 	border: 10px red;
+
 }
+
+#queenbuttons{
+
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
+
+}
+
+#form {
+
+	width: 100%;
+	max-width: 270px;
+	float: right;
+	display: inline-fixed;
+
+}
+
+#queen-form{
+
+	
+}
+
 #queenGifs {
 
-	display: flex-inline;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
+	float:left;
+	overflow: auto;
 
 }
+
 .item{
 
-	width: 360px;
-	display: flex-inline;
-	
+	overflow: auto;
+	position: relative;
+	float: left;
+	margin: 20px 0 25px;
+	padding: 20px;
+
+		
 }
