@@ -1,6 +1,7 @@
 // Initial array of Queens
 var topics = ['Kim Chi', 'Raja','Alyssa Edwards','Bianca del Rio', 'Latrice Royale', 'Jujubee','Shangela','Pandora Boxx','Jiggly Caliente','Willam','Alaska','Laganja Estranja','Courtney Act','Adore Delano','Trixie Mattel','BenDeLaCreme'];
 
+renderButtons();
 
 function renderButtons(){
 
@@ -66,9 +67,7 @@ $('#queenButtons').on('click','.queen', function(){
             else {
                 var gifDiv = $('<div class="item">');
 
-                var rating = results[i].rating;
-
-                var p = $('<p>').text( "Rating: " + rating);
+                
 
                 var queenImage = $('<img>');
                 queenImage.attr('src', results[i].images.fixed_height_still.url);
@@ -77,8 +76,13 @@ $('#queenButtons').on('click','.queen', function(){
                 queenImage.attr('data-animateurl',results[i].images.fixed_height.url);
                 queenImage.addClass('item');
 
-                gifDiv.append(p);
+                var rating = results[i].rating;
+
+                var p = $('<p>').text( "Rating: " + rating);
+                
                 gifDiv.append(queenImage);
+                gifDiv.append(p);
+               
 
                 $('#queenGifs').prepend(gifDiv);   
             }
@@ -101,6 +105,3 @@ $('#queenGifs').on('click','.item', function(){
                 $(this).data().state = 'still';
             } 
 });	
-
-
-renderButtons();
