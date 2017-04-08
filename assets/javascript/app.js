@@ -1,5 +1,5 @@
 // Initial array of Queens
-var topics = ['Kim Chi', 'Raja','Alyssa Edwards','Bianca del Rio', 'Latrice Royale', 'Jujubee','Shangela','Pandora Boxx','Jiggly Caliente','Willam','Alaska','Laganja Estranja','Courtney Act','Adore Delano','Trixie Mattel','BenDeLaCreme'];
+var topics = ['Kim Chi', 'Katya', 'Raja','Alyssa Edwards','Bianca del Rio', 'Latrice Royale', 'Jujubee','Shangela','Pandora Boxx','Jiggly Caliente','Willam','Alaska','Laganja Estranja','Courtney Act','Adore Delano','Trixie Mattel','BenDeLaCreme'];
 
 renderButtons();
 
