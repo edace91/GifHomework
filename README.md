@@ -1,4 +1,4 @@
-# GifHomework
+# RuPaul Drag Race GIFs
 Used the **GIPHY API** to make a dynamic web page that populates with gifs of my choice. 
 
 ## Synopsis
